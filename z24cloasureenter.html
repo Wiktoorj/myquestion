@@ -11,16 +11,12 @@
 <body>
     <script>
         const enterPass = (name = "", age) => {
-                const userName = name;
-                const userAge = age;
-                const till18 = 18 - age;
-                return () => {
-                        document.body.textContent =
-                            `Witaj ${userName}. Masz 
-                ${userAge >= 5 ? userAge + ' lat. ' : `${
-                        userAge > 1 ? userAge + ' lata. ' : `${userAge == 1 ? 'zaledwie rok. ' : 'problem, bo najwyraźniej nie skończyłeś jeszcze nawet roczka. '}`
-                    }`
-                }${userAge >= 18 ? 'Zapraszam do środka ! Hier ist richtig geil TECHNO !' : `Przykro mi, nie wejdziesz. Przyjdź za ${till18 >= 5 ? till18 +' lat.' : `${till18 > 1 ? till18 + ' lata.' : 'rok :)'}`}`}`;
+            const userName = name;
+            const userAge = age;
+            const till18 = 18 - age;
+            return () => {
+                document.body.textContent =
+                    `Witaj ${userName}. Masz ${userAge >= 5 ? userAge + ' lat. ' : `${userAge > 1 ? userAge + ' lata. ' : `${userAge == 1 ? 'zaledwie rok. ' : 'problem, bo najwyraźniej nie skończyłeś jeszcze nawet roczka. '}`}`}${userAge >= 18 ? 'Zapraszam do środka ! Hier ist richtig geil TECHNO !' : `Przykro mi, nie wejdziesz. Przyjdź za ${till18 >= 5 ? till18 +' lat.' : `${till18 > 1 ? till18 + ' lata.' : 'rok :)'}`}`}`;
             }
         }
         const pass = enterPass('Wiktor', 18)
